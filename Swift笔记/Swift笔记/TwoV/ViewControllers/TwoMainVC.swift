@@ -16,7 +16,7 @@ class TwoMainVC: UIViewController {
         self.title = "分类"
         // Do any additional setup after loading the view.
     }
-
+///fuck u
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
