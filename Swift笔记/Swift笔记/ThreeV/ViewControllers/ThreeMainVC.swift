@@ -14,7 +14,6 @@ class ThreeMainVC: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.title = "搜索"
-        NSLog("dddd");
     }
 
     override func didReceiveMemoryWarning() {
