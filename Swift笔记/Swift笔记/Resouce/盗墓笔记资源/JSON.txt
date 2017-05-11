@@ -1,0 +1,4 @@
+//从json串转成NSDictionary对象
+NSDictionary *dic=[jsonString JSONValue];
+//从NSDictionary对象转成json串
+NSString * jsonString = [dic JSONRepresentation];
