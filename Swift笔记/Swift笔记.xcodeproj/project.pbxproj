@@ -15,9 +15,12 @@
 		2C560B931EC2FEA10049517E /* TwoMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C560B921EC2FEA10049517E /* TwoMainVC.swift */; };
 		2C560B951EC2FEC40049517E /* ThreeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C560B941EC2FEC40049517E /* ThreeMainVC.swift */; };
 		2C560B971EC2FEF60049517E /* FourMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C560B961EC2FEF60049517E /* FourMainVC.swift */; };
+		88E4DA83EE7AA1D1B1B35070 /* Pods_Swift__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125A0CBE25BF0E85901B69A1 /* Pods_Swift__.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		125A0CBE25BF0E85901B69A1 /* Pods_Swift__.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift__.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2935606A4305B364333FED3C /* Pods-Swift笔记.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift笔记.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift笔记/Pods-Swift笔记.release.xcconfig"; sourceTree = "<group>"; };
 		2C4CAB9F1EC2F02200FC6976 /* Swift笔记.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift笔记.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4CABA21EC2F02200FC6976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4CABA91EC2F02200FC6976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +31,8 @@
 		2C560B921EC2FEA10049517E /* TwoMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoMainVC.swift; sourceTree = "<group>"; };
 		2C560B941EC2FEC40049517E /* ThreeMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeMainVC.swift; sourceTree = "<group>"; };
 		2C560B961EC2FEF60049517E /* FourMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourMainVC.swift; sourceTree = "<group>"; };
+		2C560B981EC432C10049517E /* Swift笔记-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Swift笔记-Bridging-Header.h"; path = "TwoV/Swift笔记-Bridging-Header.h"; sourceTree = "<group>"; };
+		98BBC7214FCBD58BE2946F94 /* Pods-Swift笔记.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift笔记.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift笔记/Pods-Swift笔记.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E4DA83EE7AA1D1B1B35070 /* Pods_Swift__.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16611DF6EB75ED1621C89966 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				125A0CBE25BF0E85901B69A1 /* Pods_Swift__.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2C4CAB961EC2F02200FC6976 = {
 			isa = PBXGroup;
 			children = (
 				2C4CABA11EC2F02200FC6976 /* Swift笔记 */,
 				2C4CABA01EC2F02200FC6976 /* Products */,
+				8BC70346DBBEC16EE2224B4B /* Pods */,
+				16611DF6EB75ED1621C89966 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,7 @@
 				2C4CABDF1EC2F80E00FC6976 /* TwoV */,
 				2C4CABA21EC2F02200FC6976 /* AppDelegate.swift */,
 				2C4CABB41EC2F0C400FC6976 /* RootTabBarController.swift */,
+				2C560B981EC432C10049517E /* Swift笔记-Bridging-Header.h */,
 				2C4CABB61EC2F5FE00FC6976 /* 图片资源.xcassets */,
 				2C4CABA91EC2F02200FC6976 /* Assets.xcassets */,
 				2C4CABAE1EC2F02200FC6976 /* Info.plist */,
@@ -209,6 +226,15 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		8BC70346DBBEC16EE2224B4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98BBC7214FCBD58BE2946F94 /* Pods-Swift笔记.debug.xcconfig */,
+				2935606A4305B364333FED3C /* Pods-Swift笔记.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C4CABB11EC2F02200FC6976 /* Build configuration list for PBXNativeTarget "Swift笔记" */;
 			buildPhases = (
+				EEB3B554CE93A2D0B6AADBA5 /* [CP] Check Pods Manifest.lock */,
 				2C4CAB9B1EC2F02200FC6976 /* Sources */,
 				2C4CAB9C1EC2F02200FC6976 /* Frameworks */,
 				2C4CAB9D1EC2F02200FC6976 /* Resources */,
+				CC64A8AFD1A3C8ADC0038AFA /* [CP] Embed Pods Frameworks */,
+				6C1197352F0475BAAFE88A96 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,6 +271,7 @@
 					2C4CAB9E1EC2F02200FC6976 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = FUSVT7Q66H;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -275,6 +305,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C1197352F0475BAAFE88A96 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift笔记/Pods-Swift笔记-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC64A8AFD1A3C8ADC0038AFA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift笔记/Pods-Swift笔记-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEB3B554CE93A2D0B6AADBA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C4CAB9B1EC2F02200FC6976 /* Sources */ = {
@@ -390,8 +468,10 @@
 		};
 		2C4CABB21EC2F02200FC6976 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98BBC7214FCBD58BE2946F94 /* Pods-Swift笔记.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = FUSVT7Q66H;
 				INFOPLIST_FILE = "Swift笔记/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -399,14 +479,18 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5e3e4ae6-3cfe-4fc5-98ab-8b3dcdd1eeac";
 				PROVISIONING_PROFILE_SPECIFIER = test722;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift笔记/TwoV/Swift笔记-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2C4CABB31EC2F02200FC6976 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2935606A4305B364333FED3C /* Pods-Swift笔记.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = FUSVT7Q66H;
 				INFOPLIST_FILE = "Swift笔记/Info.plist";
@@ -415,6 +499,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "789e313a-88fd-4f0b-bf69-2b4f221a7ef3";
 				PROVISIONING_PROFILE_SPECIFIER = wdzj601Distribution;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift笔记/TwoV/Swift笔记-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
