@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D7770781EC43D9F00161A7B /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7770771EC43D9F00161A7B /* NetworkRequest.swift */; };
 		2C4CABA31EC2F02200FC6976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4CABA21EC2F02200FC6976 /* AppDelegate.swift */; };
 		2C4CABAA1EC2F02200FC6976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4CABA91EC2F02200FC6976 /* Assets.xcassets */; };
 		2C4CABB51EC2F0C400FC6976 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4CABB41EC2F0C400FC6976 /* RootTabBarController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		125A0CBE25BF0E85901B69A1 /* Pods_Swift__.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift__.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7770771EC43D9F00161A7B /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkRequest.swift; path = "Swift笔记/NetworkRequest.swift"; sourceTree = SOURCE_ROOT; };
 		2935606A4305B364333FED3C /* Pods-Swift笔记.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift笔记.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift笔记/Pods-Swift笔记.release.xcconfig"; sourceTree = "<group>"; };
 		2C4CAB9F1EC2F02200FC6976 /* Swift笔记.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift笔记.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4CABA21EC2F02200FC6976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		2C4CABE31EC2F84A00FC6976 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1D7770771EC43D9F00161A7B /* NetworkRequest.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7770781EC43D9F00161A7B /* NetworkRequest.swift in Sources */,
 				2C4CABB51EC2F0C400FC6976 /* RootTabBarController.swift in Sources */,
 				2C560B971EC2FEF60049517E /* FourMainVC.swift in Sources */,
 				2C4CABE51EC2F8F600FC6976 /* MainVC.swift in Sources */,

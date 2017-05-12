@@ -8,13 +8,27 @@
 
 import UIKit
 
+enum MyEnum {
+    case aaa,bbb,ccc
+}
+
+struct MyStruct {
+    var a: Float
+    var b: Float
+}
+
 class FourMainVC: UIViewController {
 
+    
+    var e: MyEnum = .aaa
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.title = "更多"
-        // Do any additional setup after loading the view.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
