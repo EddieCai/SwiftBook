@@ -1,0 +1,64 @@
+//libicucore.dylib
+
+[pattern]	Match any one character from the set. See ICU Regular Expression Character Classes for a full description of what may appear in the pattern.
+[a]	The set containing a.
+[a-z]	The set containing a through z and all letters in between, in Unicode order.
+[^a-z]	The set containing all characters but a through z, that is, U+0000 through a-1 and z+1 through U+FFFF.
+[[pat1][pat2]]	The union of sets specified by pat1 and pat2.
+[[pat1]&[pat2]]	The intersection of sets specified by pat1 and pat2.
+[[pat1]-[pat2]]	The asymmetric difference of sets specified by pat1 and pat2.
+[abc{def}]	A set containing four members, the single characters a, b, and c and the string def
+[{abc}{def}]	A set containing two members, the string abc and the string def.
+[{a}{b}{c}][abc]	These two sets are equivalent. Each contains three items, the three individual characters a, b, and c. A {string} containing a single character is equivalent to that same character specified in any other way
+
+{n}	Match exactly n times.
+{n,}	Match at least n times. Match as many times as possible.
+{n,m}	Match between n and m times. Match as many times as possible, but not more than m.
+
+*	Match zero or more times. Match as many times as possible.
++	Match one or more times. Match as many times as possible.
+?	Match zero or one times. Prefer one.
+
+\w	Match a word character. Word characters are [\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}].
+\W	Match a non-word character.
+\s	Match a white space character. White space is defined as [\t\n\f\r\p{Z}].
+\S	Match a non-white space character.
+\d	Match any character with the Unicode General Category of Nd (Number, Decimal Digit).
+\D	Match any character that is not a decimal digit.
+\b, outside of a [Set]	Match if the current position is a word boundary. Boundaries occur at the transitions between word \w and non-word \W characters, with combining marks ignored
+
+.	Match any character.
+^	Match at the beginning of a line.
+$	Match at the end of a line.
+
+\  Quotes the following character. Characters that must be quoted to be treated as literals are * ? + [ ( ) { } ^ $ | \ . /
+
+Integer	[+\-]?[0-9]+	123-42+23
+Hex Number	0[xX][0-9a-fA-F]+	0x00xdeadbeef0xF3
+Floating Point	[+\-]?(?:[0-9]*\.[0-9]+|[0-9]+\.)	123..123+.42
+Floating Point with Exponent	[+\-]?(?:[0-9]*\.[0-9]+|[0-9]+\.)(?:[eE][+\-]?[0-9]+)?	123..12310.0E131.23e-7
+Comma Separated Number	[0-9]{1,3}(?:,[0-9]{3})*	421,2341,234,567
+Comma Separated Number	[0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]+)?	421,2341,234,567.89
+HTTP	\bhttps?://[a-zA-Z0-9\-.]+(?:(?:/[a-zA-Z0-9\-._?,'+\&%$=~*!():@\\]*)+)?
+HTTP	\b(https?)://([a-zA-Z0-9\-.]+)((?:/[a-zA-Z0-9\-._?,'+\&%$=~*!():@\\]*)+)?
+HTTP	\b(https?)://(?:(\S+?)(?::(\S+?))?@)?([a-zA-Z0-9\-.]+)(?::(\d+))?((?:/[a-zA-Z0-9\-._?,'+\&%$=~*!():@\\]*)+)?
+E-Mail	\b([a-zA-Z0-9%_.+\-]+)@([a-zA-Z0-9.\-]+?\.[a-zA-Z]{2,6})\b
+Hostname	\b(?:[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}?[a-zA-Z0-9]\.)+[a-zA-Z]{2,6}\b
+IP	\b(?:\d{1,3}\.){3}\d{1,3}\b
+IP with Optional Netmask	\b((?:\d{1,3}\.){3}\d{1,3})(?:/(\d{1,2}))?\b
+IP or Hostname	\b(?:(?:\d{1,3}\.){3}\d{1,3}|(?:[a-zA-Z0-9][a-zA-Z0-9\-]{0,61}?[a-zA-Z0-9]\.)+[a-zA-Z]{2,6})\b
+
+// finds phone number in format nnn-nnn-nnnn
+{3}-[0-9]{3}-[0-9]{4}
+
+//
+(\\w+)\\s+(\\w+)\\s+(\\w+)
+
+//This is neat.
+\\b(\\w+)\\b
+
+//$10.23, $1024.42, $3099
+\\$((\\d+)(?:\\.(\\d+)|\\.?))
+
+//one\ntwo\n\nfour\n
+(?m)^.*$
