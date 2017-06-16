@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-class MainVC: UIViewController , UITableViewDelegate , UITableViewDataSource {
+class MainVC: UIViewController , UITableViewDelegate , UIGestureRecognizerDelegate,UITableViewDataSource {
     let tableview = UITableView(frame: CGRect.zero, style: .plain)
     var listArr : Array<mainBookListModel>? = []
     override func viewDidLoad() {
@@ -49,7 +49,7 @@ class MainVC: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "booklist", for: indexPath) as! mainBookListCell
-        cell.model = listArr?[indexPath.row]
+        cell.model = listArr?[indexPath.row].title
         return cell
         
     }
@@ -61,6 +61,10 @@ class MainVC: UIViewController , UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableview.deselectRow(at: indexPath, animated: true)
+        let bookreadvc = BookReadVC()
+        bookreadvc.hidesBottomBarWhenPushed = true
+        bookreadvc.readTitle = listArr?[indexPath.row]
+        self.navigationController?.pushViewController(bookreadvc, animated: true)
     }
     /*
     // MARK: - Navigation
