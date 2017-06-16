@@ -49,7 +49,7 @@ class MainVC: UIViewController , UITableViewDelegate , UIGestureRecognizerDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "booklist", for: indexPath) as! mainBookListCell
-        cell.model = listArr?[indexPath.row].title
+        cell.model = listArr?[indexPath.row]
         return cell
         
     }
@@ -63,7 +63,7 @@ class MainVC: UIViewController , UITableViewDelegate , UIGestureRecognizerDelega
         tableview.deselectRow(at: indexPath, animated: true)
         let bookreadvc = BookReadVC()
         bookreadvc.hidesBottomBarWhenPushed = true
-        bookreadvc.readTitle = listArr?[indexPath.row]
+        bookreadvc.readTitle = listArr?[indexPath.row].title
         self.navigationController?.pushViewController(bookreadvc, animated: true)
     }
     /*

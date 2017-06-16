@@ -8,13 +8,14 @@
 
 import UIKit
 
-class readModel: NSObject {
+class ReadModel: NSObject {
     var readTitle : String?
-    var readPageModel : Array<readChapterListModel>?
+    var readChapterListModels : Array<ReadChapterListModel>?
     
-    class func parseWithArr(dic : Dictionary<String, Any>?) -> readModel {
-        
-        
-        return readModel()
+    class func parseWithDic(dic : NSDictionary?) -> ReadModel {
+        let model = ReadModel()
+        model.readTitle = (dic?.object(forKey: "title") as! String)
+        model.readChapterListModels = ReadChapterListModel.parseWithArr(arr: dic?.object(forKey: "chapterArrArr") as! Array<Any>)
+        return model
     }
 }

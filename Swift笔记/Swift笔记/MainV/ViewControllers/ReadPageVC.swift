@@ -9,10 +9,20 @@
 import UIKit
 
 class ReadPageVC: UIViewController {
-
+    var readView : ReadView?
+    var conText : String? = ""
+    var isFirstPage : Bool! = true
+    var isLastPage : Bool! = false
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        readView = ReadView()
+        readView?.backgroundColor = UIColor.red
+        view.addSubview(readView!)
+        readView?.snp.makeConstraints({ (make) in
+            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0))
+        })
+        readView?.content = conText
+        readView?.frameRef = ReadParser.parserRead(conText!, bounds:ReadParser.GetReadViewFrame())
         // Do any additional setup after loading the view.
     }
 

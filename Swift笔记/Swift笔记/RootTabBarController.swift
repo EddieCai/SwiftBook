@@ -33,7 +33,7 @@ class RootTabBarController: UITabBarController {
     {
         let image = UIImage.init(named: imagestr)
         vC.tabBarItem = UITabBarItem.init(title: namestr, image: image, selectedImage: nil)
-        return  UINavigationController.init(rootViewController: vC)
+        return  BaseNavigationController.init(rootViewController: vC)
     }
 
     /*

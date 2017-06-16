@@ -8,11 +8,11 @@
 
 import UIKit
 
-class BaseNavigationController: UINavigationController {
+class BaseNavigationController: UINavigationController , UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.interactivePopGestureRecognizer?.delegate=self
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +21,14 @@ class BaseNavigationController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+//        || (self.viewControllers.last?.isKind(of: BookReadVC.self))!
+        if self.viewControllers.count == 1  {
+            return false
+        }
+        return true
+    }
 
     /*
     // MARK: - Navigation

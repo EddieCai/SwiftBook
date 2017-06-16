@@ -3,3 +3,5 @@
 //
 
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <CommonCrypto/CommonDigest.h>
+#import <YYModel/YYModel.h>
